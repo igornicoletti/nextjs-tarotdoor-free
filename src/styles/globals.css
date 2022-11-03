@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-tertiary;
+    @apply text-primary;
+    @apply font-raleway-medium;
+  }
+
+  body::before {
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    opacity: 0.05;
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    background-image: url('../../public/images/tarotdoor_background.svg')
+  }
+  
+  .iconSlideUp > g > path {
+    animation: iconSlideUp 0.5s ease-in forwards;
+  }
+  
+  .iconSlideDown > g > path {
+    animation: iconSlideDown 0.5s ease-in forwards;
+  }
+
+  @keyframes iconSlideUp {
+    from {d: path('M831.6,956.286c15.286,0,28.571,9.286,28.571,9.286S844.924,975,829.915,975s-36.314-8.286-36.314-8.286S816.315,956.286,831.6,956.286Z')}
+    to {d: path('M831.6,956.286c15.286,0,28.571,9.286,28.571,9.286S845.657,958,830.649,958s-37.048,8.714-37.048,8.714S816.315,956.286,831.6,956.286Z')}
+  }
+  
+  @keyframes iconSlideDown {
+    from {d: path('M831.6,956.286c15.286,0,28.571,9.286,28.571,9.286S845.657,958,830.649,958s-37.048,8.714-37.048,8.714S816.315,956.286,831.6,956.286Z')}
+    to {d: path( 'M831.6,956.286c15.286,0,28.571,9.286,28.571,9.286S844.924,975,829.915,975s-36.314-8.286-36.314-8.286S816.315,956.286,831.6,956.286Z')}
+  }
+}
